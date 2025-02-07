@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+    --font-sans: 'Inter', sans-serif;
+    --font-serif: 'Manrope', sans-serif;
+    --font-mono: 'Roboto', monospace;
+    --font-display: 'Bebas Neue', sans-serif;
+
+    --color-n1: #D3E97A;
+    --color-n2: #C7C7C7;
+    --color-black: #0A0A0A;
+}
+
+body {
+    @apply bg-black text-white;
+}
+
+.container {
+    @apply w-full px-[16px] sm:px-6 lg:px-8;
+}
+
+/* ---- ТИПИ ТЕКСТУ ---- */
+
+.body--text {
+    @apply text-n2 text-[16px] sm:text-[18px] leading-[150%] font-serif font-medium;
+}
+
+h1 {
+    @apply text-white text-[56px] sm:text-[80px] lg:text-[101px] leading-[90%] font-display font-normal;
+}
+
+h2 {
+    @apply text-white text-[42px] sm:text-[60px] lg:text-[76px] leading-[100%] font-display font-normal;
+}
+
+h4 {
+    @apply text-white text-[24px] sm:text-[28px] lg:text-[32px] leading-[140%] font-serif font-medium;
+}
+
+h5 {
+    @apply text-white text-[14px] sm:text-[16px] leading-[150%] font-serif font-semibold;
+}
+
+h6 {
+    @apply text-white text-[14px] sm:text-[16px] leading-[160%] font-serif font-medium;
+}
+
+/* ---- ФОРМИ ---- */
+
+input,
+textarea {
+    @apply bg-[#222222] outline-0 rounded-[4px] text-white text-[16px] leading-[150%] font-serif font-medium w-full sm:w-[100%] h-[51px] px-4;
+}
+
+label {
+    @apply text-n2 text-[16px] sm:text-[18px] leading-[150%] font-serif font-medium mt-[24px] mb-2;
+}
+
+textarea {
+    @apply h-[156px] resize-none pt-3;
+}
+
+/* ---- ІНШІ ЕЛЕМЕНТИ ---- */
+
+.button--mini {
+    @apply w-[48px] sm:w-[54px] h-[48px] sm:h-[54px] bg-[#222222] rounded-[100px] flex items-center justify-center;
+}
+
+.info-rows {
+    @apply py-4 border-y-[1px] border-[#484848] flex justify-between items-center;
+}
