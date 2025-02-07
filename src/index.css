@@ -13,6 +13,10 @@
     --color-black: #0A0A0A;
 }
 
+button {
+    @apply cursor-pointer
+}
+
 body {
     @apply bg-black text-white;
 }
@@ -71,3 +75,5 @@ textarea {
 .info-rows {
     @apply py-4 border-y-[1px] border-[#484848] flex justify-between items-center;
 }
+
+

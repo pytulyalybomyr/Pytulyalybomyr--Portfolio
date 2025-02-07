@@ -68,16 +68,27 @@ export default function Projects() {
                                         ))}
                                     </div>
                                 </div>
-                                <div className="mt-6 flex gap-6">
-                                    <a href={project.url__web} className="text-[#D3E97A] flex items-center gap-2">
-                                        <h6>LIVE DEMO</h6>
-                                        <img src="arrow--top.svg" alt="" />
-                                    </a>
-                                    <a href={project.url__github} className="text-[#D3E97A] flex items-center gap-2">
-                                        <h6>SEE ON GITHUB</h6>
-                                        <img src="github.svg" alt="" />
-                                    </a>
-                                </div>
+                                 <div className="mt-6">
+                                        <ul className="flex items-center gap-6">
+                                            <li className="flex items-stretch flex-col gap-1">
+                                                <a href={project.url__web} className="flex items-center gap-2">
+                                                <h6 className="!text-[#D3E97A] uppercase group-hover:underline hover:!text-white underline-offset-9 transition-all duration-300 ease-in-out">
+                                            LIve demo
+                                        </h6>
+                                                    <img src="arrow--top.svg" alt="" />
+                                                </a>
+                                                
+                                            </li>
+                                            <li className="flex items-stretch flex-col gap-1">
+                                                <a href={project.url__github} className="flex items-center gap-2">
+                                                <h6 className="!text-[#D3E97A] uppercase group-hover:underline hover:!text-white underline-offset-9 transition-all duration-300 ease-in-out">
+                                            See on github
+                                        </h6>
+                                                    <img src="github.svg" alt="" />
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
                             </div>
                         </div>
                     ))}

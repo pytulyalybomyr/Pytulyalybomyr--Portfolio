@@ -7,7 +7,7 @@ function App() {
                 <section>
                     <div className="container max-w-[1240px] mx-auto">
                         <div className="flex flex-col lg:flex-row items-center justify-between mt-[30px] gap-10">
-                            <div className="flex flex-col gap-6 lg:gap-10 items-start min-[320px]:!items-center ">
+                            <div className="flex flex-col gap-6 lg:gap-10 items-start max-lg:!items-center ">
                                 <div className="flex flex-col gap-2 min-[320px]:!items-center">
                                     <h1 className="!text-[56px] sm:!text-[80px]  lg:!text-[99px] min-[320px]:!text-[40px]">
                                         Hi, I am Liubomyr Pytulya
@@ -17,11 +17,17 @@ function App() {
                                     </p>
                                 </div>
                                 <div className="flex flex-wrap items-center gap-4">
-                                    <button className="rounded-[100px] w-[160px] sm:w-[187px] h-[54px] bg-n1 text-black font-serif flex gap-[15px] sm:gap-[25px] items-center justify-center font-bold">
+                                
+                                    <button onClick={() => {
+  const element = document.getElementById('my-section');
+  element?.scrollIntoView({
+    behavior: 'smooth'
+  }); 
+}} role="button" className="rounded-[100px] w-[160px] sm:w-[187px] h-[54px] bg-n1 text-black font-serif flex gap-[15px] sm:gap-[25px] items-center justify-center font-bold">
                                         CONTACT ME <img src="dot.svg" alt="" />
                                     </button>
-                                    <button className="button--mini"><img src="linkedin.svg" alt="" /></button>
-                                    <button className="button--mini"><img src="github.svg" alt="" /></button>
+                                    <button role="link" className="button--mini"><img src="linkedin.svg" alt="" /></button>
+                                    <button role="link" className="button--mini"><img src="github.svg" alt="" /></button>
                                 </div>
                             </div>
                             <img className="w-[80%] sm:w-[60%] lg:w-[50%] h-auto rounded-[15px]" src="my--photo.png" alt="Liubomyr Pytulya" />
@@ -45,13 +51,20 @@ function App() {
                                         I am a front-end developer based in Lviv and currently studying at school. I love focusing on accessibility in web development and am passionate about problem-solving. Currently learning React.js, Tailwind CSS, and a bit of design. When not coding, I enjoy playing basketball. I am always eager to improve my skills.
                                     </p>
                                 </div>
-
+                                <ul>
                                 <li className="flex flex-col gap-1">
-                                    <a href="/aboutMe" className="">
-                                        <h6 className="!text-[#D3E97A] uppercase">More about me</h6>
+                                    <a href="/aboutMe" className="group">
+                                        <h6 className="!text-[#D3E97A] uppercase underline hover:!text-white underline-offset-9 transition-all duration-300 ease-in-out">
+                                            More about me
+                                        </h6>
                                     </a>
-                                    <div className="w-full h-[1px] bg-[#D3E97A]"></div>
                                 </li>
+
+
+
+
+                                </ul>
+                                
                             </div>
                         </div>
                     </div>
